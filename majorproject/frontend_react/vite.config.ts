@@ -1,9 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { extname } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      include: /\.(js|jsx|ts|tsx)$/,
+    }),
+  ],
   server: {
     port: 3000,
     proxy: {
