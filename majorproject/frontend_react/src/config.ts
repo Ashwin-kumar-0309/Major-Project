@@ -1,7 +1,7 @@
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000').trim()
-const CONTRACT_ADDRESS = (import.meta.env.VITE_CONTRACT_ADDRESS || '').trim()
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
-const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT || 'development'
+const API_BASE_URL = ((import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:5000').trim()
+const CONTRACT_ADDRESS = ((import.meta as any).env?.VITE_CONTRACT_ADDRESS || '').trim()
+const GOOGLE_MAPS_API_KEY = (import.meta as any).env?.VITE_GOOGLE_MAPS_API_KEY || ''
+const ENVIRONMENT = ((import.meta as any).env?.VITE_ENVIRONMENT || 'development')
 
 const buildApiUrl = (pathname: string = ''): string => {
   if (!pathname) return ''
