@@ -185,12 +185,3 @@ select:focus {
     @apply text-sm;
   }
 }
-
-/* Dark Mode Toggle Transition */
-html.dark {
-  @apply dark;
-}
-
-html.light {
-  @apply light;
-}
