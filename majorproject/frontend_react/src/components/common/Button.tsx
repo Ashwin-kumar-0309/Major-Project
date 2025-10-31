@@ -58,11 +58,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <motion.button
         ref={ref}
         className={combinedClassName}
-        whileHover={{ scale: !disabled ? 1.05 : 1 }}
-        whileTap={{ scale: !disabled ? 0.98 : 1 }}
-        transition={{ duration: 0.2 }}
+        whileHover={{ scale: !disabled ? 1.05 : 1 } as any}
+        whileTap={{ scale: !disabled ? 0.98 : 1 } as any}
+        transition={{ duration: 0.2 } as any}
         disabled={disabled || loading}
-        {...props}
+        {...(props as any)}
       >
         {loading ? (
           <>
